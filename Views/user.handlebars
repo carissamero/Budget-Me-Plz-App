@@ -1,0 +1,322 @@
+<div style="drop-shadow-md z-index: -1; height: 3px; position:fixed; top: 62px; left: 0px; background-color: #1111"
+  class=" w-screen">
+</div>
+<div id="time-bar" style="drop-shadow-md z-index: 0; height: 3px; width: 0px; position:fixed; top: 66px; left: 0px"
+  class="  bg-blue-300">
+</div>
+<div id="time-ball" style=" z-index: 11; position:fixed; top: 55px; left: 0px;">
+  <svg style="pointer-events: none;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+    fill="#75ACFF">
+    <path d="M0 0h24v24H0z" fill="none" />
+    <path d="M7 14l5-5 5 5z" />
+  </svg>
+</div>
+<div id="time-int" style=" z-index: 11; position:fixed; top: 45px; left: 0px;" class="italic text-black text-center font-normal ">
+  0:00 pm
+</div>
+<br><br><br>
+<br>
+<div class="flex font-monster">
+  <div class="w-screen md:w-screen p-28 sm:p-2 md:p-2 m-auto">
+    <div class="flex items-center max-w-screen-xl m-auto">
+      <div class="md:px-20 mr-20 text-xl sm:text-2xl md:text-3xl font-bold"> Accounts
+        {{!-- <button
+          class="inline-flex items-center justify-center w-7 h-7 mr-2 text-white transition-colors duration-150 bg-gray-300 rounded-sm focus:shadow-outline hover:bg-gray-700">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+            <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+              clip-rule="evenodd" fill-rule="evenodd"></path>
+          </svg>
+        </button> --}}
+      </div>
+      <div class="md:pl-60 ml-60 text-xl sm:text-2xl md:text-3xl font-bold"> Cards
+        {{!-- <button
+          class="inline-flex items-center justify-center w-7 h-7 mr-2 text-white transition-colors duration-150 bg-gray-300 rounded-sm focus:shadow-outline hover:bg-gray-700">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+            <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+              clip-rule="evenodd" fill-rule="evenodd"></path>
+          </svg>
+        </button> --}}
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="flex m-auto justify-around md:p-4 items-center font-monster md:w-screen max-w-screen-2xl">
+  <div class="md:p-10 flex bg-blue-100 md:w-7/12 md:h-7/12">
+    <div class="m-auto">
+
+      <p contenteditable="true" class="text-xl sm:text-2xl md:text-4xl font-light"><span
+          class="bill-cost">{{data.checking}}</span>
+      </p>
+      <p class="  text-lg sm:text-xl md:text-xl font-light"> <span>Checking</span> <span style="cursor: pointer;"
+          class="account-save-button float-right pl-3">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg style="pointer-events: none;" height="20pt" version="1.1" viewBox="0 0 128 128"
+            xmlns="http://www.w3.org/2000/svg">
+            <g fill="#000">
+              <path
+                d="m114.82 87.105v22.496c0 0.44922-0.0625 0.86328-0.16016 1.2461-0.44922 2.207-2.3984 3.8711-4.7031 3.8711h-91.938c-2.4648 0-4.5117-1.8867-4.7695-4.2891-0.0625-0.28906-0.0625-0.54297-0.0625-0.86328v-22.496c0-2.6562 2.1758-4.8008 4.8008-4.8008 1.3125 0 2.5273 0.54297 3.3906 1.4062s1.4062 2.0781 1.4062 3.3906v18.016h82.465v-18.016c0-2.6562 2.1758-4.8008 4.8008-4.8008 1.3125 0 2.5273 0.54297 3.3906 1.4062 0.83594 0.90234 1.3789 2.1211 1.3789 3.4336z" />
+              <path
+                d="m91.68 64.574-23.586 23.586c-0.03125 0.0625-0.097656 0.097656-0.12891 0.12891-0.86328 0.86328-1.9844 1.4062-3.1055 1.5664-0.097656 0-0.19141 0.03125-0.28906 0.03125-0.19141 0.03125-0.38281 0.03125-0.57422 0.03125l-0.54297-0.03125c-0.097656 0-0.19141-0.03125-0.28906-0.03125-1.1523-0.16016-2.2383-0.70312-3.1055-1.5664l-23.715-23.715c-1.0898-1.0898-1.6328-2.5273-1.6328-3.9688 0-1.4414 0.54297-2.8789 1.6328-3.9688 2.1758-2.1758 5.7266-2.1758 7.9375 0l14.176 14.176 0.007813-51.934c0-3.0703 2.5273-5.6016 5.6016-5.6016 1.5352 0 2.9453 0.64062 3.9688 1.6328 1.0234 1.0234 1.6328 2.3984 1.6328 3.9688v51.938l14.176-14.176c2.1758-2.1758 5.7266-2.1758 7.9375 0 2.0742 2.207 2.0742 5.7578-0.10156 7.9336z" />
+            </g>
+          </svg>
+        </span>
+      </p>
+    </div>
+
+    <div class="m-auto">
+      <p contenteditable="true" class="text-xl sm:text-2xl md:text-4xl"><span class="bill-cost">{{data.savings}}</span>
+      </p>
+      <p class="text-lg sm:text-xl md:text-xl font-light"> <span>Savings</span> <span style="cursor: pointer;"
+          class="account-save-button float-right pl-3 ">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg style="pointer-events: none;" height="20pt" version="1.1" viewBox="0 0 128 128"
+            xmlns="http://www.w3.org/2000/svg">
+            <g fill="#000">
+              <path
+                d="m114.82 87.105v22.496c0 0.44922-0.0625 0.86328-0.16016 1.2461-0.44922 2.207-2.3984 3.8711-4.7031 3.8711h-91.938c-2.4648 0-4.5117-1.8867-4.7695-4.2891-0.0625-0.28906-0.0625-0.54297-0.0625-0.86328v-22.496c0-2.6562 2.1758-4.8008 4.8008-4.8008 1.3125 0 2.5273 0.54297 3.3906 1.4062s1.4062 2.0781 1.4062 3.3906v18.016h82.465v-18.016c0-2.6562 2.1758-4.8008 4.8008-4.8008 1.3125 0 2.5273 0.54297 3.3906 1.4062 0.83594 0.90234 1.3789 2.1211 1.3789 3.4336z" />
+              <path
+                d="m91.68 64.574-23.586 23.586c-0.03125 0.0625-0.097656 0.097656-0.12891 0.12891-0.86328 0.86328-1.9844 1.4062-3.1055 1.5664-0.097656 0-0.19141 0.03125-0.28906 0.03125-0.19141 0.03125-0.38281 0.03125-0.57422 0.03125l-0.54297-0.03125c-0.097656 0-0.19141-0.03125-0.28906-0.03125-1.1523-0.16016-2.2383-0.70312-3.1055-1.5664l-23.715-23.715c-1.0898-1.0898-1.6328-2.5273-1.6328-3.9688 0-1.4414 0.54297-2.8789 1.6328-3.9688 2.1758-2.1758 5.7266-2.1758 7.9375 0l14.176 14.176 0.007813-51.934c0-3.0703 2.5273-5.6016 5.6016-5.6016 1.5352 0 2.9453 0.64062 3.9688 1.6328 1.0234 1.0234 1.6328 2.3984 1.6328 3.9688v51.938l14.176-14.176c2.1758-2.1758 5.7266-2.1758 7.9375 0 2.0742 2.207 2.0742 5.7578-0.10156 7.9336z" />
+            </g>
+          </svg>
+        </span> </p>
+    </div>
+  </div>
+  <div class="md:p-10 flex bg-gray-100 justify-center md:w-4/12 md:h-7/12">
+    <div class="m-auto">
+      <p contenteditable="true" class="text-xl sm:text-2xl md:text-4xl"><span class="bill-cost">{{data.credit_card}}
+        </span> </p>
+      <p class="text-lg sm:text-xl md:text-xl"> <span>Credit Card</span> <span style="cursor: pointer;"
+          class="account-save-button float-right pl-3 ">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg style="pointer-events: none;" height="20pt" version="1.1" viewBox="0 0 128 128"
+            xmlns="http://www.w3.org/2000/svg">
+            <g fill="#000">
+              <path
+                d="m114.82 87.105v22.496c0 0.44922-0.0625 0.86328-0.16016 1.2461-0.44922 2.207-2.3984 3.8711-4.7031 3.8711h-91.938c-2.4648 0-4.5117-1.8867-4.7695-4.2891-0.0625-0.28906-0.0625-0.54297-0.0625-0.86328v-22.496c0-2.6562 2.1758-4.8008 4.8008-4.8008 1.3125 0 2.5273 0.54297 3.3906 1.4062s1.4062 2.0781 1.4062 3.3906v18.016h82.465v-18.016c0-2.6562 2.1758-4.8008 4.8008-4.8008 1.3125 0 2.5273 0.54297 3.3906 1.4062 0.83594 0.90234 1.3789 2.1211 1.3789 3.4336z" />
+              <path
+                d="m91.68 64.574-23.586 23.586c-0.03125 0.0625-0.097656 0.097656-0.12891 0.12891-0.86328 0.86328-1.9844 1.4062-3.1055 1.5664-0.097656 0-0.19141 0.03125-0.28906 0.03125-0.19141 0.03125-0.38281 0.03125-0.57422 0.03125l-0.54297-0.03125c-0.097656 0-0.19141-0.03125-0.28906-0.03125-1.1523-0.16016-2.2383-0.70312-3.1055-1.5664l-23.715-23.715c-1.0898-1.0898-1.6328-2.5273-1.6328-3.9688 0-1.4414 0.54297-2.8789 1.6328-3.9688 2.1758-2.1758 5.7266-2.1758 7.9375 0l14.176 14.176 0.007813-51.934c0-3.0703 2.5273-5.6016 5.6016-5.6016 1.5352 0 2.9453 0.64062 3.9688 1.6328 1.0234 1.0234 1.6328 2.3984 1.6328 3.9688v51.938l14.176-14.176c2.1758-2.1758 5.7266-2.1758 7.9375 0 2.0742 2.207 2.0742 5.7578-0.10156 7.9336z" />
+            </g>
+          </svg>
+        </span></p>
+    </div>
+  </div>
+</div>
+
+<div class="flex  m-auto justify-around md:p-2 items-center font-monster md:w-screen max-w-screen-2xl">
+  <div class="md:mt-6 self-start flex bg-white md:w-7/12">
+    <div class=" md:w-screen">
+
+
+      <div class="pb-4">
+
+        <div class="text-xl sm:text-xl md:text-2xl font-bold"> Bills/Debts <button
+            class="modal-open inline-flex items-center justify-center w-10 h-7 mr-2 text-white transition-colors duration-150 bg-gray-300 rounded-sm focus:shadow-outline hover:bg-blue-500">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+              <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                clip-rule="evenodd" fill-rule="evenodd"></path>
+            </svg>
+          </button>
+          <div
+            class="z-10 modal text-base opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+            <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+            <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+              <div
+                class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+                <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                  viewBox="0 0 18 18">
+                  <path
+                    d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                  </path>
+                </svg>
+                <span class="text-sm">(Esc)</span>
+              </div>
+              <div class="modal-content py-4 text-left px-6">
+                <div class="flex justify-between items-center pb-3">
+                  <p class="text-2xl font-bold"> Add a Bill </p>
+                  <div class="modal-close cursor-pointer z-50">
+                    <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                      viewBox="0 0 18 18">
+                      <path
+                        d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                      </path>
+                    </svg>
+                  </div>
+                </div>
+                <label class="block mt-4">
+                  <label class="block">
+                    <span class="text-gray-700"> Name of Bill: </span>
+                    <div class="">
+                      <input id="bill-name" class="border p-1 form-input mt-1 block w-full" placeholder="Ex. Debt">
+                    </div>
+                  </label>
+                  <label class="block mt-4">
+                    <label class="block">
+                      <span class="text-gray-700"> Amount: </span>
+                      <div class="">
+                        <input id="bill-cost" class="border p-1 form-input mt-1 block w-full" placeholder="Ex. $3000">
+                      </div>
+                    </label>
+                    <label class="block mt-4">
+                      <label class="block">
+                        <span class="text-gray-700"> Due Date: </span>
+                        <div class="">
+                          <input id="bill-due-date" type="date" value="mm/dd/yyyy" min="2022-01-01" max="2099-12-31"
+                            class="border p-1 form-input mt-1 block w-full" placeholder="Ex. 1/1/2022">
+                        </div>
+                      </label>
+                      <div class="mt-4">
+                        <div class="flex float-left">
+                          <div class="flex mt-0">
+                            <label class="flex items-center">
+                              <input id="bill-is-auto-pay" type="checkbox" class="form-checkbox">
+                              <span class="ml-2 ">Auto Pay</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex justify-end pt-2">
+                        <button id="bill-save-button"
+                          class="px-4 bg-transparent p-3 rounded-lg border border-gray-300 text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2">
+                          Confirm </button>
+                      </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{#each data.bills}}
+
+      <div class=" md:p-1 bg-blue-100 font-bold rounded-sm">
+        <div class="float-left"><span class="bill-name ">{{name}}</span></div> <span
+          class="bill-cost md:px-8 font-light">{{cost}}</span>
+        <div class="flex float-right justify-center">
+          <span class="md:px-8 font-light"> <span class="font-bold">Due </span> <span
+              class="informal-due-date">{{due_date}}</span> </span>
+          <button id="{{id}}" type="button"
+            class=" kill-bill bg-white rounded-full p-0 inline-flex items-center justify-center text-gray-700 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <svg style="pointer-events: none;" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <ul class="list-disc md:p-3 md:px-6">
+        {{#if auto_pay}}
+        <li> <b>Auto</b> Pay </li>
+        {{else}}
+        <li> <b>No Auto</b> Pay </li>
+        {{/if}}
+        {{#if debited}}
+        <li class="flex"> Taken Out of Acccount
+          <span id="{{id}}" status="true" style="cursor: pointer;" class="svg-taken">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg style="pointer-events:none" width="30pt" height="20pt" version="1.1" viewBox="-40 0 170 170"
+              xmlns="http://www.w3.org/2000/svg">
+              <path style="pointer-events: none;"
+                d="m0 65.98c2.6406-5.2773 7.918-11.875 17.156-9.2383 7.918 2.6406 13.195 10.559 17.156 21.113 31.672-35.629 58.062-60.699 89.73-68.617 3.957 0 5.2773 0 2.6406 2.6406-34.309 23.754-67.301 59.383-93.691 105.57-1.3203 1.3203-2.6406 1.3203-3.957 0-5.2773-13.195-9.2383-26.391-15.836-39.586-2.6406-6.5977-6.5977-11.875-13.195-11.875z"
+                fill="#39c367" fill-rule="evenodd" />
+            </svg>
+
+          </span>
+        </li>
+        {{else}}
+        <li class="flex"> Taken Out of Acccount
+          <span id="{{id}}" status="false" style="cursor: pointer;" class="svg-taken">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg style="pointer-events: none;" width="30pt" height="20pt" version="1.1" viewBox="0 0 170 170"
+              xmlns="http://www.w3.org/2000/svg">
+              <path style="pointer-events: none;"
+                d="m23.297 68.734h81.281c1.4062 0 2.5586-1.1523 2.5586-2.5586v-4.4805c0-1.4062-1.1523-2.5586-2.5586-2.5586h-81.281c-1.4062 0-2.5586 1.1523-2.5586 2.5586v4.4805c-0.003906 1.4102 1.1484 2.5586 2.5586 2.5586z"
+                fill="#9999" />
+            </svg>
+
+          </span>
+
+        </li>
+        {{/if}}
+      </ul>
+      {{/each}}
+    </div>
+  </div>
+
+
+
+  <div style="margin-top: 67px;" class=" flex self-start md:p-1 md:h-96 md:w-4/12 grid md:gap-24">
+
+    <div class=" grid grid-row-2 md:grid-row-2 divide-y divide-gray-300">
+      <div class="text-black">
+
+        <p class="md:p-1 text-xl sm:text-2xl md:text-base bg-gray-100"> Total Monthly Income <span><span
+              class="float-right pl-3 " style="cursor:pointer" id="monthly-income-clickable">
+              <?xml version="1.0" encoding="UTF-8"?>
+              <svg style="pointer-events: none;" height="20pt" version="1.1" viewBox="0 0 128 128"
+                xmlns="http://www.w3.org/2000/svg">
+                <g fill="#000">
+                  <path
+                    d="m114.82 87.105v22.496c0 0.44922-0.0625 0.86328-0.16016 1.2461-0.44922 2.207-2.3984 3.8711-4.7031 3.8711h-91.938c-2.4648 0-4.5117-1.8867-4.7695-4.2891-0.0625-0.28906-0.0625-0.54297-0.0625-0.86328v-22.496c0-2.6562 2.1758-4.8008 4.8008-4.8008 1.3125 0 2.5273 0.54297 3.3906 1.4062s1.4062 2.0781 1.4062 3.3906v18.016h82.465v-18.016c0-2.6562 2.1758-4.8008 4.8008-4.8008 1.3125 0 2.5273 0.54297 3.3906 1.4062 0.83594 0.90234 1.3789 2.1211 1.3789 3.4336z" />
+                  <path
+                    d="m91.68 64.574-23.586 23.586c-0.03125 0.0625-0.097656 0.097656-0.12891 0.12891-0.86328 0.86328-1.9844 1.4062-3.1055 1.5664-0.097656 0-0.19141 0.03125-0.28906 0.03125-0.19141 0.03125-0.38281 0.03125-0.57422 0.03125l-0.54297-0.03125c-0.097656 0-0.19141-0.03125-0.28906-0.03125-1.1523-0.16016-2.2383-0.70312-3.1055-1.5664l-23.715-23.715c-1.0898-1.0898-1.6328-2.5273-1.6328-3.9688 0-1.4414 0.54297-2.8789 1.6328-3.9688 2.1758-2.1758 5.7266-2.1758 7.9375 0l14.176 14.176 0.007813-51.934c0-3.0703 2.5273-5.6016 5.6016-5.6016 1.5352 0 2.9453 0.64062 3.9688 1.6328 1.0234 1.0234 1.6328 2.3984 1.6328 3.9688v51.938l14.176-14.176c2.1758-2.1758 5.7266-2.1758 7.9375 0 2.0742 2.207 2.0742 5.7578-0.10156 7.9336z" />
+                </g>
+              </svg>
+            </span> <span contenteditable="true" id="monthly-income"
+              class="bill-cost float-right text-right w-20 bg-gray-100 text-black">{{data.monthly_income}}</span></span>
+        </p>
+
+        <p class="md:p-1 text-lg sm:text-xl md:text-base"> Total Monthly Bills <span id="monthly-bills"
+            class="float-right">{{#each data.bills}}{{cost}},{{/each}}</span>
+        </p>
+      </div>
+      <div>
+        <p class="md:p-1 md:pb-0 md:text-base"> Leaves for the Month <span id="leaves" class="float-right"> $2,000
+          </span>
+
+
+      </div>
+
+    </div>
+
+    <div class="grid grid-row-2 md:grid-row-2 divide-y divide-gray-300">
+      <div class="text-black">
+        <p class="bg-gray-100">
+          <span class="md:p-1 text-xl sm:text-2xl md:text-lg "> Next Payday </span><span style="cursor:pointer"
+            class="float-right pl-3">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg style="pointer-events: none;" height="20pt" version="1.1" viewBox="0 0 128 128"
+              xmlns="http://www.w3.org/2000/svg">
+              <g fill="#000">
+                <path
+                  d="m114.82 87.105v22.496c0 0.44922-0.0625 0.86328-0.16016 1.2461-0.44922 2.207-2.3984 3.8711-4.7031 3.8711h-91.938c-2.4648 0-4.5117-1.8867-4.7695-4.2891-0.0625-0.28906-0.0625-0.54297-0.0625-0.86328v-22.496c0-2.6562 2.1758-4.8008 4.8008-4.8008 1.3125 0 2.5273 0.54297 3.3906 1.4062s1.4062 2.0781 1.4062 3.3906v18.016h82.465v-18.016c0-2.6562 2.1758-4.8008 4.8008-4.8008 1.3125 0 2.5273 0.54297 3.3906 1.4062 0.83594 0.90234 1.3789 2.1211 1.3789 3.4336z" />
+                <path
+                  d="m91.68 64.574-23.586 23.586c-0.03125 0.0625-0.097656 0.097656-0.12891 0.12891-0.86328 0.86328-1.9844 1.4062-3.1055 1.5664-0.097656 0-0.19141 0.03125-0.28906 0.03125-0.19141 0.03125-0.38281 0.03125-0.57422 0.03125l-0.54297-0.03125c-0.097656 0-0.19141-0.03125-0.28906-0.03125-1.1523-0.16016-2.2383-0.70312-3.1055-1.5664l-23.715-23.715c-1.0898-1.0898-1.6328-2.5273-1.6328-3.9688 0-1.4414 0.54297-2.8789 1.6328-3.9688 2.1758-2.1758 5.7266-2.1758 7.9375 0l14.176 14.176 0.007813-51.934c0-3.0703 2.5273-5.6016 5.6016-5.6016 1.5352 0 2.9453 0.64062 3.9688 1.6328 1.0234 1.0234 1.6328 2.3984 1.6328 3.9688v51.938l14.176-14.176c2.1758-2.1758 5.7266-2.1758 7.9375 0 2.0742 2.207 2.0742 5.7578-0.10156 7.9336z" />
+              </g>
+            </svg>
+          </span>
+
+          <span contenteditable="true" id="monthly-income"
+            class="float-right text-right w-40 bg-gray-100 text-black">{{data.pay_day}}</span>
+
+        </p>
+        <p id="due-before" class="md:p-1 text-xl sm:text-2xl md:text-lg"> Bills Due Before Next Payday <span
+            class="float-right "> $500
+          </span></p>
+      </div>
+      <div>
+        <p class="md:p-1 text-xl sm:text-2xl md:text-lg"> New Checking Balance <span id="new-checking"
+            class="float-right text-bold md:text-2xl"> $7,500 </span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="p-10"></footer>
+<script src="Public/JS/Helper/mathhelp.js"></script>
+<script src="Public/JS/put-logout.js"></script>
+<script src="Public/JS/modal.js"></script>
+
+<script src="Public/JS/delete-bills.js"></script>
+<script src="Public/JS/add-info.js"></script>
