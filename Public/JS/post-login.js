@@ -1,6 +1,6 @@
 //Change routes, have success/fail message append to the page rather than the alert? //
 
-const loginFormHandler = async(event) => {
+const loginFormHandler = (event) => {
     event.preventDefault();
     console.log("works");
 
