@@ -1,10 +1,19 @@
 {
     "dependencies": {
+        "bcrypt": "^5.0.1",
+        "connect-session-sequelize": "^7.1.4",
+        "dotenv": "^16.0.1",
         "express": "^4.18.1",
-        "nodemailer-express-handlebars": "^5.0.0"
+        "express-handlebars": "^6.0.6",
+        "express-session": "^1.17.3",
+        "mysql2": "^2.3.3",
+        "nodemailer-express-handlebars": "^5.0.0",
+        "sequelize": "^6.21.0",
+        "session": "^0.1.0"
     },
     "scripts": {
-        "start": "node server.js"
+        "start": "node server.js",
+        "seed": "node seeds/seed.js"
     },
     "name": "budget-me-plz-app",
     "description": "A web application that allows you to keep track of monthly expenses all in one place. This is a group project for the UT Austin Coding Bootcamp requiring our group to design and build our first full-stack web application using the MVC paradigm, creating our own server-side API, adding user authentication, and connecting to a database.",

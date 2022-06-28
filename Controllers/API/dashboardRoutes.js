@@ -1,6 +1,15 @@
 const router = require("express").Router();
 const { Bills, User } = require("../index");
 
+router.get('/users', (req, res) => {
+    User.findAll()
+    .then(dbUserData => res.json(dbUserData))
+    .catch(err => {
+        console.log(err); 
+        res.status(500).json(err);
+    });
+});
+
 router.post("/bills", (req, res) => {
     req.body.user_id = req.session.user_id;
     console.log(req.body);
