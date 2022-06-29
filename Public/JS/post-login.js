@@ -11,17 +11,19 @@ const loginFormHandler = async (event) => {
     password: userPassword,
   };
   if (userEmail && userPassword) {
-    const response = await fetch("api/post/login", {
+    fetch("api/login", {
       method: "POST",
       body: JSON.stringify(loginObject),
       headers: { "Content-Type": "application/json" },
-    });
-
-    if (response.ok) {
-      document.location.replace("/");
-    } else {
-      alert("Failed to log in");
-    }
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        if (response.auth) {
+          document.location.replace("/animation-testing.html");
+        } else {
+          alert("Failed to log in");
+        }
+      });
   }
 };
 
