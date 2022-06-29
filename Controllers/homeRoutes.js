@@ -43,12 +43,18 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/signup", (req, res) => {
+    console.log('hey');
     if (req.session.logged_in) {
         res.redirect("/user");
         return;
     }
     res.render("signup");
 });
+
+router.put("/create-user", (req, res) => {
+   // User.create(req.body);
+    console.log(req.body, res.body);
+})
 
 router.get("/user", withAuth, (req, res) => {
     res.render("user");

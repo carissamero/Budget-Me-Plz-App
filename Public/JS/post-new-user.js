@@ -1,7 +1,7 @@
 //Change routes, have success/fail message append to the page rather than the alert? //
 const signUpFormHandler = async(event) => {
     event.preventDefault();
-
+    console.log('listening');
     const firstName = document.querySelector("#first-name").value.trim();
     const lastName = document.querySelector("#last-name").value.trim();
     const email = document.querySelector("#email-signup").value.trim();
@@ -39,9 +39,9 @@ const signUpFormHandler = async(event) => {
 };
 
 document
-    .querySelector("#signup-button")
+    .getElementById("signup-button")
     .addEventListener("click", signUpFormHandler);
 
-document
-    .querySelector("#signup-button")
-    .addEventListener("click", signUpFormHandler);
+// document
+//     .querySelector("#signup-button")
+//     .addEventListener("click", signUpFormHandler);
