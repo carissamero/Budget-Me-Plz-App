@@ -19,7 +19,7 @@ const loginFormHandler = async (event) => {
       .then((res) => res.json())
       .then((response) => {
         if (response.auth) {
-          document.location.replace("/user");
+          document.location.replace("/user.html");
         } else {
           alert("Failed to log in");
         }

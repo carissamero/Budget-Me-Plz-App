@@ -1,9 +1,6 @@
 const router = require("express").Router();
 const { Bills, User } = require("../../Models/index");
 
-<<<<<<< HEAD
-
-=======
 const bcrypt = require("bcrypt");
 
 router.get("/users", (req, res) => {
@@ -14,7 +11,6 @@ router.get("/users", (req, res) => {
       res.status(500).json(err);
     });
 });
->>>>>>> origin/quick_fix
 
 router.post("/bills", (req, res) => {
   req.body.user_id = req.session.user_id;
