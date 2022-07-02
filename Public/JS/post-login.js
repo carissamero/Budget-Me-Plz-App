@@ -43,7 +43,7 @@ async function loginFormHandler(event) {
       headers: { 'Content-type': 'application/json' }
     });
     if (response.ok) {
-      document.location.replace('/user/', {loggedIn: true });
+      document.location.replace('/user');
     } else {
       alert(response.statusText);
     }

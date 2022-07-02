@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User, Bills, Accounts, Debt, Cards } = require("../Models/index");
+const user = require("../Models/user");
 const withAuth = require("../Utilities/auth");
 
 router.get("/", async(req, res) => {
@@ -40,6 +41,31 @@ router.get("/login", (req, res) => {
     }
 
     res.render("login");
+});
+
+//7.2.22 after logging in
+router.get('/dashboard', withAuth, (req, res) => {
+    console.log(req.session);
+    console.log('--------------');
+    user.findAll({
+        where: {
+            user_id: req.session.user_id
+        },
+        include: [
+            {
+                model: Accounts,
+                attributes: ['name', 'amount', 'user_id' ]
+            }
+        ]
+    })
+    .then(dbUserData => {
+        const userData = dbUserData.map(post => post.get({ plain: true }));
+        res.render('dashboard', { userData, loggedIn: true });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
 router.get("/signup", (req, res) => {

@@ -25,26 +25,64 @@ router.post("/bills", (req, res) => {
     .catch((err) => res.json(err));
 });
 
-router.post("/login", (req, res) => {
-  let email = req.body.email;
-  let password = req.body.password;
+// router.post("/login", (req, res) => {
+//   let email = req.body.email;
+//   let password = req.body.password;
 
-  User.findAll({
-    where: {
-      email: email,
-    },
-  }).then((result) => {
-    if (result && result.length > 0) {
-      let u = result[0];
-      if (bcrypt.compareSync(password, u.password)) {
-        res.json({ auth: true });
-        return;
-      }
+//   User.findAll({
+//     where: {
+//       email: email,
+//     },
+//   }).then((result) => {
+//     if (result && result.length > 0) {
+//       let u = result[0];
+//       if (bcrypt.compareSync(password, u.password)) {
+//         res.json({ auth: true });
+//         return;
+//       }
+//     }
+//     // incorrect password or username;
+//     res.json({ auth: false });
+//     return;
+//   });
+// });
+
+router.post('/login', async (req, res) => {
+  try {
+    const dbUserData = await User.findOne({
+      where: {
+        email: req.body.email,
+      },
+    });
+
+    if (!dbUserData) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password. Please try again!' });
+      return;
     }
-    // incorrect password or username;
-    res.json({ auth: false });
-    return;
-  });
+
+    const validPassword = await dbUserData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password. Please try again!' });
+      return;
+    }
+
+    // Once the user successfully logs in, set up the sessions variable 'loggedIn'
+    req.session.save(() => {
+      req.session.loggedIn = true;
+
+      res
+        .status(200)
+        .json({ user: dbUserData, message: 'You are now logged in!' });
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 // router.put('/accounts', (req, res) => {
