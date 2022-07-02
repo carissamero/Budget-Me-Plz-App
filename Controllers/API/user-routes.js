@@ -4,6 +4,7 @@ const { user } = require('../../Models');
 
 
 router.post('/', (req, res) => {
+  console.log('post path');
   user.create({
     first_name: req.body.first_name,
     last_name: req.body.last_name,

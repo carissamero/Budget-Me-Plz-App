@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Bills, Accounts, Debt, Cards } = require("../Models/index");
+const { User, Bills, Accounts, Debt, Cards } = require("../Models");
 const user = require("../Models/user");
 const withAuth = require("../Utilities/auth");
 
@@ -81,7 +81,7 @@ router.get("/user", withAuth, (req, res) => {
 });
 
 router.get("/request-new-password", (req, res) => {
-    res.render("requestreset");
+    res.render("passwordreset");
 });
 
 router.get(`/password-reset?:id`, (req, res) => {

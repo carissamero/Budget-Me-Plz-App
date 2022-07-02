@@ -16,4 +16,20 @@ router.get("/", async(req, res) => {
         res.status(500).json(err);
     }
 });
+
+router.get('/getUser', async(req, res) => {
+    try {
+        const dbUserData = await User.findOne({
+            where: {
+              email: this.email,
+            },
+          });
+          console.log('database works');
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+
+
 module.exports = router;
