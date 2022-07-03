@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const sequelize = require('../../Config/connection'); 
-const { user } = require('../../Models');
+// const { user } = require('../../Models');
+const user = require("../../Models/user");
 
 
 router.post('/', (req, res) => {
@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
   .then(dbUserData => {
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
-      req.session.username = dbUserData.email;
+      req.session.email = dbUserData.email;
       req.session.loggedIn = true;
 
       res.json(dbUserData);
