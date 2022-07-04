@@ -9,13 +9,21 @@
     "mysql2": "^2.3.3",
     "nodemailer-express-handlebars": "^5.0.0",
     "sequelize": "^6.21.0",
-    "session": "^0.1.0",
-    "node": "^16.15.0"
+    "session": "^0.1.0"
   },
   "scripts": {
     "start": "node server.js",
     "seed": "node seeds/seed.js"
   },
+
+  {
+    "name": "budget-me-plz-app",
+    "description": "a really cool appA web application that allows you to keep track of monthly expenses all in one place. This is a group project for the UT Austin Coding Bootcamp requiring our group to design and build our first full-stack web application using the MVC paradigm, creating our own server-side API, adding user authentication, and connecting to a database.",
+    "version": "1.0.0",
+    "engines": {
+      "node": "16.15.0"
+    }
+  }
   "name": "budget-me-plz-app",
   "description": "A web application that allows you to keep track of monthly expenses all in one place. This is a group project for the UT Austin Coding Bootcamp requiring our group to design and build our first full-stack web application using the MVC paradigm, creating our own server-side API, adding user authentication, and connecting to a database.",
   "version": "1.0.0",
