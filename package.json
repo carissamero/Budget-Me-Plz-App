@@ -24,18 +24,24 @@
       "node": "16.15.0"
     }
   }
-  "name": "budget-me-plz-app",
-  "description": "A web application that allows you to keep track of monthly expenses all in one place. This is a group project for the UT Austin Coding Bootcamp requiring our group to design and build our first full-stack web application using the MVC paradigm, creating our own server-side API, adding user authentication, and connecting to a database.",
-  "version": "1.0.0",
-  "main": "server.js",
-  "repository": {
+
+  {
+    "name": "budget-me-plz-app",
+    "description": "A web application that allows you to keep track of monthly expenses all in one place. This is a group project for the UT Austin Coding Bootcamp requiring our group to design and build our first full-stack web application using the MVC paradigm, creating our own server-side API, adding user authentication, and connecting to a database.",
+    "version": "1.0.0",
+    "main": "server.js",
+    "repository": {
     "type": "git",
     "url": "git+https://github.com/carissamero/Budget-Me-Plz-App.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
+    },
+  }
+
+  {
+    "author": "",
+    "license": "ISC",
+    "bugs": {
     "url": "https://github.com/carissamero/Budget-Me-Plz-App/issues"
-  },
-  "homepage": "https://github.com/carissamero/Budget-Me-Plz-App#readme"
-}
+  
+      "homepage": "https://github.com/carissamero/Budget-Me-Plz-App#readme"
+    },
+  } 
