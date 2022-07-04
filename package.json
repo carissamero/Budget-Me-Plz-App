@@ -1,35 +1,4 @@
 {
-<<<<<<< HEAD
-  "dependencies": {
-    "bcrypt": "^5.0.1",
-    "connect-session-sequelize": "^7.1.4",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "express-session": "^1.17.3",
-    "mysql2": "^2.3.3",
-    "nodemailer-express-handlebars": "^5.0.0",
-    "nodemailer-handlebars": "^1.0.1",
-    "sequelize": "^6.21.0"
-  },
-  "scripts": {
-    "start": "node server.js",
-    "seed": "node Seeds/seed.js"
-  },
-  "name": "budget-me-plz-app",
-  "description": "A web application that allows you to keep track of monthly expenses all in one place. This is a group project for the UT Austin Coding Bootcamp requiring our group to design and build our first full-stack web application using the MVC paradigm, creating our own server-side API, adding user authentication, and connecting to a database.",
-  "version": "1.0.0",
-  "main": "server.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/carissamero/Budget-Me-Plz-App.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/carissamero/Budget-Me-Plz-App/issues"
-  },
-  "homepage": "https://github.com/carissamero/Budget-Me-Plz-App#readme"
-=======
     "dependencies": {
         "bcrypt": "^5.0.1",
         "connect-session-sequelize": "^7.1.4",
@@ -60,5 +29,4 @@
         "url": "https://github.com/carissamero/Budget-Me-Plz-App/issues"
     },
     "homepage": "https://github.com/carissamero/Budget-Me-Plz-App#readme"
->>>>>>> feature/signup
 }
