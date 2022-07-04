@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const { Bills, User } = require("../../Models/index");
-
+const withAuth = require("../../Utilities/auth");
 const bcrypt = require("bcrypt");
+const bills = require("../../Models/bills");
 
 router.get("/users", (req, res) => {
   User.findAll()
@@ -25,27 +26,6 @@ router.post("/bills", (req, res) => {
     .catch((err) => res.json(err));
 });
 
-// router.post("/login", (req, res) => {
-//   let email = req.body.email;
-//   let password = req.body.password;
-
-//   User.findAll({
-//     where: {
-//       email: email,
-//     },
-//   }).then((result) => {
-//     if (result && result.length > 0) {
-//       let u = result[0];
-//       if (bcrypt.compareSync(password, u.password)) {
-//         res.json({ auth: true });
-//         return;
-//       }
-//     }
-//     // incorrect password or username;
-//     res.json({ auth: false });
-//     return;
-//   });
-// });
 
 router.post('/login', async (req, res) => {
   try {
@@ -82,6 +62,33 @@ router.post('/login', async (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
+  }
+});
+
+router.post('/bills', /* withAuth,*/ (req, res) => {
+  bills.create({
+    name: req.body.name,
+    cost: req.body.cost,
+    due_date: req.body.due_date,
+    auto_pay: req.body.auto_pay,
+    debited: req.body.debited,
+    user_id: req.session.user_id
+  })
+    .then(dbBillData => res.json(dbBillData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  }
+  else {
+    res.status(404).end();
   }
 });
 

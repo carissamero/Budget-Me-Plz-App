@@ -127,7 +127,7 @@ const monthlyEL = document
 ///ADD BILLS ///
 const billsHandler = async(event) => {
     event.preventDefault();
-    console.log(event.target);
+    // console.log(event.target);
 
     const billName = document.querySelector("#bill-name").value.trim();
     const billCost = parseInt(document.querySelector("#bill-cost").value.trim());
@@ -156,11 +156,11 @@ const billsHandler = async(event) => {
         });
 
         if (response.ok) {
-            document.location.replace("/");
+            document.location.replace("/user");
         } else {
             console.log(response.status);
             // -------------------------------------------- remove later
-            document.location.replace("/");
+            document.location.replace("/user");
         }
     }
 };
