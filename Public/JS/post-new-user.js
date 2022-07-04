@@ -30,7 +30,7 @@ const signupFormHandler = async (event) => {
                 new_checking: 0,
             };
     
-            const response = await fetch("/api/post/signup", {
+            const response = await fetch("/api/", {
                 method: "POST",
                 body: JSON.stringify(user),
                 // body: JSON.stringify({
@@ -41,6 +41,7 @@ const signupFormHandler = async (event) => {
                 // }),
                 headers: { "Content-Type": "application/json" },
             });
+            console.log(response.status);
         if (response.ok) {
                 document.location.replace("/login/");
         } else {

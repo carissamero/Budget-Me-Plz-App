@@ -40,23 +40,23 @@ user.init({
     },
     pay_day: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     monthly_income: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     checking: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     savings: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     credit_card: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     // bills_before: {
     //   type: DataTypes.INTEGER,
@@ -64,7 +64,7 @@ user.init({
     // },
     new_checking: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
   },
   {
