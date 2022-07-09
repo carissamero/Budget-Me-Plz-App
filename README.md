@@ -4,7 +4,7 @@ A web application that allows you to keep track of monthly expenses all in one p
 
 ## Contributors
 
-Carissa Mero, Erik Najera, Alex Scott, Albalicia Espino
+Carissa Mero, Erik Najera, Alex Scott, Albalicia Espino, Stephania Alexis
 
 ## Requirements
 
